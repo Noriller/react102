@@ -7,6 +7,7 @@ export function SideBar() {
   const routes: [string, string, boolean][] = [
     ['/1-basic', 'basic render'],
     ['/2-props', 'with props'],
+    ['/3-if', 'with if'],
   ].map(([href, name]) => [href, name, href === router.asPath]);
 
   return (
