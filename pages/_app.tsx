@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/globals.css';
 import { SideBar } from '../src/SideBar';
+import Link from 'next/link';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <header className='h-auto mb-2'>
-        <h1 className='font-bold text-3xl border-b-4'>React 102</h1>
+        <Link href='/'>
+          <h1 className='font-bold text-3xl border-b-4'>React 102</h1>
+        </Link>
         <span className='text-sm'>
           Basics of React after the 101 stuff (not included).
         </span>
@@ -23,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <aside className='w-1/6 h-full px-2'>
           <SideBar />
         </aside>
-        <main className='w-5/6 border-2'>
+        <main className='w-5/6'>
           <Component {...pageProps} />
         </main>
       </div>

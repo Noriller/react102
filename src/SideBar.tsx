@@ -1,11 +1,29 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 export function SideBar() {
+  const router = useRouter();
+
+  const routes: [string, string, boolean][] = [
+    ['/1-basic', 'basic render'],
+    ['/2-props', 'with props'],
+  ].map(([href, name]) => [href, name, href === router.asPath]);
+
   return (
-    <ol>
-      <li>1 links</li>
-      <li>2 links</li>
-      <li>3 links</li>
-      <li>4 links</li>
-      <li>5 links</li>
-    </ol>
+    <ul>
+      {routes.map(([href, name, active]) => {
+        return (
+          <li key={href} className='hover:text-blue-500'>
+            <Link
+              href={href}
+              className={`${
+                active ? 'text-cyan-200 font-bold' : ''
+              } underline`}>
+              {name}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
