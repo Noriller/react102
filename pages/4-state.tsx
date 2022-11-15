@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '../src/Button';
 
 export default function WithState() {
   const [state, setState] = useState(0);
@@ -13,11 +14,7 @@ export default function WithState() {
 
   return (
     <div>
-      <div className='my-4 border-2 rounded-lg p-2 w-max hover:text-blue-500'>
-        <button onClick={() => handleClick()}>
-          Click Me to Increase Values
-        </button>
-      </div>
+      <Button onClick={() => handleClick()}>Click Me to Increase Values</Button>
 
       <div className='my-4'>
         <p>This one is consuming from the state.</p>
@@ -37,11 +34,9 @@ export default function WithState() {
           variable is always <pre className='inline bg-slate-600'>0</pre>
         </p>
         <div>
-          <div className='my-4 border-2 rounded-lg p-2 w-max hover:text-blue-500'>
-            <button onClick={() => handleClick(false)}>
-              Click Me to Increase Only the Variable
-            </button>
-          </div>
+          <Button onClick={() => handleClick(false)}>
+            Click Me to Increase Only the Variable
+          </Button>
           <p>
             Even if you try to increase only the variable, React doesn&apos;t
             know anything changed and so it doesn&apos;t rerender.
