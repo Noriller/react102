@@ -8,6 +8,9 @@ export function SideBar() {
     ['/1-basic', 'basic render'],
     ['/2-props', 'with props'],
     ['/3-if', 'with if'],
+    ['/4-state', 'with state'],
+    // ['/', ''],
+    // ['/', ''],
   ].map(([href, name]) => [href, name, href === router.asPath]);
 
   return (
