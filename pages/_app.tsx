@@ -31,7 +31,9 @@ export default function App({ Component, pageProps }: AppProps) {
         </main>
       </div>
       <footer className='h-auto border-t-2'>
-        {`Bruno Noriller @${new Date().getFullYear()}`}
+        {`Bruno Noriller @2022${
+          new Date().getFullYear() > 2022 ? `-${new Date().getFullYear()}` : ''
+        }`}
       </footer>
     </>
   );
