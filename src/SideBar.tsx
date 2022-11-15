@@ -9,7 +9,7 @@ export function SideBar() {
     ['/2-props', 'with props'],
     ['/3-if', 'with if'],
     ['/4-state', 'with state'],
-    // ['/', ''],
+    ['/5-effect', 'with effect'],
     // ['/', ''],
   ].map(([href, name]) => [href, name, href === router.asPath]);
 
