@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 function WithIf() {
-  const random = Math.random();
-  const reload = useRouter().reload;
+  const [random, setRandom] = useState(Math.random());
 
   return (
     <div>
@@ -14,7 +13,9 @@ function WithIf() {
         </p>
         <p>The random value was: {random.toFixed(2)}</p>
         <div className='my-4 border-2 rounded-lg p-2 w-max hover:text-blue-500'>
-          <button onClick={reload}>Click here to reload the page</button>
+          <button onClick={() => setRandom(Math.random())}>
+            Click here to reload random
+          </button>
         </div>
       </div>
       <div className='text-xl'>
