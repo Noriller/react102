@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CodeLike } from '../src/CodeLike';
 
 export default function Props() {
   const [state, setState] = useState(0);
@@ -34,8 +35,7 @@ export default function Props() {
             <CustomElement value={state} />
             <div className='mt-4'>
               <p>
-                The component above takes a{' '}
-                <pre className='inline bg-slate-600'>value</pre> prop and
+                The component above takes a <CodeLike>value</CodeLike> prop and
                 renders something based on it.
               </p>
             </div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../src/Button';
+import { CodeLike } from '../src/CodeLike';
 
 export default function WithState() {
   const [state, setState] = useState(0);
@@ -31,7 +32,7 @@ export default function WithState() {
         </p>
         <p>
           It also recreates the whole component on each render, meaning the
-          variable is always <pre className='inline bg-slate-600'>0</pre>
+          variable is always <CodeLike>0</CodeLike>
         </p>
         <div>
           <Button onClick={() => handleClick(false)}>
