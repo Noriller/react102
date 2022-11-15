@@ -30,10 +30,10 @@ export default function WithState() {
         <p>
           Even if the variable increases, it doesn&apos;t render the changes
         </p>
-        <p>
+        <div>
           It also recreates the whole component on each render, meaning the
           variable is always <CodeLike>0</CodeLike>
-        </p>
+        </div>
         <div>
           <Button onClick={() => handleClick(false)}>
             Click Me to Increase Only the Variable
