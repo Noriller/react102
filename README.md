@@ -4,7 +4,7 @@ So, you’ve learned the basics of React, then when you finally started using yo
 
 Link to the article:
 
-<https://dev.to/noriller>
+<https://dev.to/noriller/react-102-basic-data-flows-2lcp>
 
 ## How to use
 
