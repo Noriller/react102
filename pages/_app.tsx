@@ -3,6 +3,7 @@ import Head from 'next/head';
 import '../styles/globals.css';
 import { SideBar } from '../src/SideBar';
 import Link from 'next/link';
+import { RepoLink } from '../src/RepoLink';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,13 +15,16 @@ export default function App({ Component, pageProps }: AppProps) {
           content='Basics of React after the 101 stuff (not included).'
         />
       </Head>
-      <header className='h-auto mb-2'>
-        <Link href='/'>
-          <h1 className='font-bold text-3xl border-b-4'>React 102</h1>
-        </Link>
-        <span className='text-sm'>
-          Basics of React after the 101 stuff (not included).
-        </span>
+      <header className='h-auto mb-2 border-b-4 flex justify-between items-center'>
+        <div>
+          <Link href='/'>
+            <h1 className='font-bold text-3xl'>React 102</h1>
+          </Link>
+          <span className='text-sm'>
+            Basics of React after the 101 stuff (not included).
+          </span>
+        </div>
+        <RepoLink />
       </header>
       <div className='mb-auto h-auto flex'>
         <aside className='w-1/6 h-full px-2'>
